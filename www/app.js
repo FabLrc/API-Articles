@@ -25,6 +25,8 @@ async function initializeAdminUser() {
         email: "admin@mail.com",
         password: hashedPassword,
         role: "admin",
+        age: 25,
+        date: new Date(),
       });
 
       const userId = adminUser._id;

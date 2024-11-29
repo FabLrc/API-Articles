@@ -12,6 +12,11 @@ const articleSchema = Schema({
     enum: ["published", "draft"],
     default: "draft",
   },
+  userId: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
 });
 
 let Article;
