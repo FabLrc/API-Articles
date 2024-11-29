@@ -10,7 +10,6 @@ module.exports = async (req, res, next) => {
       throw "not token";
     }
     const decoded = jwt.verify(token, config.secretJwtToken);
-    console.log("Token décodé :", decoded);
     const user = await User.findById(decoded.userId).select("-password");
 
     if (!user) {
