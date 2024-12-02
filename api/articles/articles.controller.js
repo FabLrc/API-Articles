@@ -1,4 +1,5 @@
 const articlesService = require("./articles.service");
+const ForbiddenError = require("../../errors/forbidden");
 
 class ArticleController {
   async create(req, res, next) {
